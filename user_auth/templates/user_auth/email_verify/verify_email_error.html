@@ -1,0 +1,9 @@
+{% extends "site_view/index.html" %}
+{% block content %}
+<h2> Your email verification was unsuccessful. Click here to request a new verification link. </h2>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                 <a href="{% url 'request-new-link-from-email' %}">Resend Verification</a>
+            </small>
+        </div>
+{% endblock content %}

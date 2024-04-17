@@ -1,0 +1,9 @@
+{% extends "site_view/index.html" %}
+{% block content %}
+<h2> An email has been sent with instructions to verify your account </h2>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                 <a href="{% url 'request-new-link-from-email' %}">Request for new email</a>
+            </small>
+        </div>
+{% endblock content %}

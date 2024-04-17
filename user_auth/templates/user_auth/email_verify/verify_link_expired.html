@@ -1,0 +1,9 @@
+{% extends "site_view/index.html" %}
+{% block content %}
+<h2> This verification link is expired. Click here to request a new verification link. </h2>
+        <div class="border-top pt-3">
+            <small class="text-muted">
+                 <a href="{% url 'request-new-link-from-email' %}"> Request New Link</a>
+            </small>
+        </div>
+{% endblock content %}

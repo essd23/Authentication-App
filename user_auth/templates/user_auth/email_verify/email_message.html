@@ -1,0 +1,10 @@
+{% autoescape off %}
+  You have just tried to get an account with this {{ user.email }} at MySite ,
+  click the link below to complete your signup:
+<p>  <a href="{{link}}" class="my-button" > Confirm Email</a> </p>
+
+<p>
+  Sincerely,
+<p>  MySite Administrator </p>
+</p>
+{% endautoescape %}
