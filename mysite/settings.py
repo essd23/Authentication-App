@@ -147,8 +147,8 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 EMAIL_PORT = 465
-EMAIL_HOST_USER = 'websiteportfolio675@gmail.com'
-EMAIL_HOST_PASSWORD = 'mmhmxflgaccxmtxk'
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 
 DEFAULT_FROM_EMAIL = 'noreply<no_reply@domain.com>'
 EXPIRE_AFTER = '5m'
