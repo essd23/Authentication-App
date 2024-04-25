@@ -10,7 +10,7 @@ urlpatterns = [
     path('logout/', user_views.logout_user, name='logout'),
     path('register/', user_views.register, name='register'),
 
-
+    # RESET PASSWORD
     path('reset_password/', auth_views.PasswordResetView.as_view(template_name='user_auth/password_reset/password_reset.html',
                                                                  html_email_template_name=
                                                                  'user_auth/password_reset/password_reset_email.html'),name='reset_password'),
@@ -21,6 +21,7 @@ urlpatterns = [
     path('reset/password-complete', auth_views.PasswordResetCompleteView.as_view(
         template_name='user_auth/password_reset/password_reset_complete.html'), name='password_reset_complete'),
 
+    # EMAIL VERIFICATION
 
     path('verification/', include('verify_email.urls')),
     path('verification/user/verify-email/request-new-link/', request_new_link, name='request-new-link'),
