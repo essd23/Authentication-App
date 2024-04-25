@@ -96,6 +96,8 @@ DATABASES = {
     }
 }
 
+DATABASES['default'] = dj_database_url.parse('postgres://django_render_5zla_user:8c93velgElYFF5QoWE3ICPjhQqz1OM78@dpg-col4kb8l5elc73dl3qlg-a.oregon-postgres.render.com/django_render_5zla')
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -134,7 +136,7 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = 'static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
+
 django_heroku.settings(locals())
 
 
