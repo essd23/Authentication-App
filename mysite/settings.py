@@ -94,10 +94,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
+
     }
 }
 
-DATABASES['default'] = dj_database_url.parse('postgres://django_render_5zla_user:8c93velgElYFF5QoWE3ICPjhQqz1OM78@dpg-col4kb8l5elc73dl3qlg-a.oregon-postgres.render.com/django_render_5zla')
 
 
 # Password validation
@@ -138,9 +138,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = 'static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
-django_heroku.settings(locals())
-
-
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
@@ -149,8 +146,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
-LOGIN_REDIRECT_URL = 'index'
-LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = "/login"
+LOGOUT_REDIRECT_URL = "/logout"
 
 
 # email configs

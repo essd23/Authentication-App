@@ -2,7 +2,8 @@ from django.urls import path, include
 from . import views as user_views
 from django.contrib.auth import views as auth_views
 
-from .views import verify_email_message, verify_email_complete, request_new_link, verify_link_expired, new_email_sent
+from .views import verify_email_message, verify_email_complete, \
+    request_new_link, verify_link_expired, new_email_sent
 
 urlpatterns = [
     path('', user_views.index, name='index'),
